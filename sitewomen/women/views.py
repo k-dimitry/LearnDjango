@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect
 from django.shortcuts import render
+from django.template.defaultfilters import slugify, cut
 from django.urls.exceptions import Resolver404
 from django.urls import reverse
 
@@ -21,13 +22,14 @@ def index(request: HttpRequest) -> HttpResponse:
     # t = render_to_string('women/index.html')
     # return HttpResponse(t)
     data = {
-        'title': 'Main Page',
+        'title': 'main Page',
         'menu': MENU,
         'float': 28.56,
         'list': [1, 2, 'abc', True],
         'set': {1, 2, 3, 2, 5},
         'dict': {'key_1': 'value_1', 'key_2': 'value_2'},
         'obj': MyClass(10, 20),
+        'url': slugify('The Main Page')
     }
     return render(request, 'women/index.html', context=data)
 
