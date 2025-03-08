@@ -1,11 +1,13 @@
-from datetime import datetime
-
-from django.http import HttpRequest, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect
+from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 from django.urls.exceptions import Resolver404
-from django.urls import reverse
 
-MENU = ['About site', 'Add article', 'Feedback', 'Log in']
+MENU = [
+    {'title': "About Site", 'url_name': 'about'},
+    {'title': "Add Article", 'url_name': 'add_page'},
+    {'title': "Contact", 'url_name': 'contact'},
+    {'title': "Login", 'url_name': 'login'}
+]
 
 data_db = [
     {'id': 1, 'title': 'Анджелина Джоли', 'content': 'Биография Анджелины Джоли', 'is_published': True},
@@ -15,8 +17,6 @@ data_db = [
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    # t = render_to_string('women/index.html')
-    # return HttpResponse(t)
     data = {
         'title': 'Main Page',
         'menu': MENU,
@@ -25,30 +25,27 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, 'women/index.html', context=data)
 
 
-def about(request: HttpRequest):
+def about(request: HttpRequest) -> HttpResponse:
     data = {
         'title': 'About Site',
     }
     return render(request, 'women/about.html', context=data)
 
 
-def categories(request: HttpRequest, cat_id: int) -> HttpResponse:
-    return HttpResponse(f'<h1>Articles by category</h1><p>id: {cat_id}</p>')
+def show_post(request: HttpRequest, post_id: int) -> HttpResponse:
+    return HttpResponse(f'Showing article with id = {post_id}')
 
 
-def categories_by_slug(request: HttpRequest, cat_slug: str) -> HttpResponse:
-    if request.GET:
-        print(request.GET)
-
-    return HttpResponse(f'<h1>Articles by category</h1><p>slug: {cat_slug}</p>')
+def add_page(request: HttpRequest) -> HttpResponse:
+    return HttpResponse('Add an article')
 
 
-def archive(request: HttpRequest, year: int) -> HttpResponse:
-    if year > datetime.now().year:
-        uri = reverse('cats', args=('sport',))
-        return HttpResponsePermanentRedirect(uri)
+def contact(request: HttpRequest) -> HttpResponse:
+    return HttpResponse('Contact us')
 
-    return HttpResponse(f'<h1>Archive by year</h1><p>{year}</p>')
+
+def login(request: HttpRequest) -> HttpResponse:
+    return HttpResponse('Authorization')
 
 
 def page_not_found(request: HttpRequest, exception: Resolver404) -> HttpResponseNotFound:
