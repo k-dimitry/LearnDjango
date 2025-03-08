@@ -1,12 +1,42 @@
 from datetime import datetime
 
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect
+from django.shortcuts import render
 from django.urls.exceptions import Resolver404
 from django.urls import reverse
 
+MENU = ['About site', 'Add article', 'Feedback', 'Log in']
+
+
+class MyClass:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f'<MyClass: x = {self.x}; y = {self.y}>'
+
 
 def index(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("Main mage of 'women' application")
+    # t = render_to_string('women/index.html')
+    # return HttpResponse(t)
+    data = {
+        'title': 'Main Page',
+        'menu': MENU,
+        'float': 28.56,
+        'list': [1, 2, 'abc', True],
+        'set': {1, 2, 3, 2, 5},
+        'dict': {'key_1': 'value_1', 'key_2': 'value_2'},
+        'obj': MyClass(10, 20),
+    }
+    return render(request, 'women/index.html', context=data)
+
+
+def about(request: HttpRequest):
+    data = {
+        'title': 'About Site',
+    }
+    return render(request, 'women/about.html', context=data)
 
 
 def categories(request: HttpRequest, cat_id: int) -> HttpResponse:
