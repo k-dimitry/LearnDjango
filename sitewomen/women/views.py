@@ -2,34 +2,25 @@ from datetime import datetime
 
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect
 from django.shortcuts import render
-from django.template.defaultfilters import slugify, cut
 from django.urls.exceptions import Resolver404
 from django.urls import reverse
 
 MENU = ['About site', 'Add article', 'Feedback', 'Log in']
 
-
-class MyClass:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def __repr__(self):
-        return f'<MyClass: x = {self.x}; y = {self.y}>'
+data_db = [
+    {'id': 1, 'title': 'Анджелина Джоли', 'content': 'Биография Анджелины Джоли', 'is_published': True},
+    {'id': 2, 'title': 'Марго Робби', 'content': 'Биография Марго Робби', 'is_published': False},
+    {'id': 3, 'title': 'Джулия Робертс', 'content': 'Биография Джулии Робертс', 'is_published': True},
+]
 
 
 def index(request: HttpRequest) -> HttpResponse:
     # t = render_to_string('women/index.html')
     # return HttpResponse(t)
     data = {
-        'title': 'main Page',
+        'title': 'Main Page',
         'menu': MENU,
-        'float': 28.56,
-        'list': [1, 2, 'abc', True],
-        'set': {1, 2, 3, 2, 5},
-        'dict': {'key_1': 'value_1', 'key_2': 'value_2'},
-        'obj': MyClass(10, 20),
-        'url': slugify('The Main Page')
+        'posts': data_db,
     }
     return render(request, 'women/index.html', context=data)
 
