@@ -28,6 +28,7 @@ def index(request: HttpRequest) -> HttpResponse:
 def about(request: HttpRequest) -> HttpResponse:
     data = {
         'title': 'About Site',
+        'menu': MENU,
     }
     return render(request, 'women/about.html', context=data)
 
