@@ -21,12 +21,19 @@ data_db = [
     {'id': 3, 'title': 'Джулия Робертс', 'content': 'Биография Джулия Робертс', 'is_published': True},
 ]
 
+cats_db = [
+    {'id': 1, 'name': 'Actresses'},
+    {'id': 2, 'name': 'Singers'},
+    {'id': 3, 'name': 'Sportswomen'},
+]
+
 
 def index(request: HttpRequest) -> HttpResponse:
     data = {
         'title': 'Main Page',
         'menu': MENU,
         'posts': data_db,
+        'cat_selected': 0,
     }
     return render(request, 'women/index.html', context=data)
 
@@ -41,6 +48,16 @@ def about(request: HttpRequest) -> HttpResponse:
 
 def show_post(request: HttpRequest, post_id: int) -> HttpResponse:
     return HttpResponse(f'Showing article with id = {post_id}')
+
+
+def show_category(request: HttpRequest, cat_id: int) -> HttpResponse:
+    data = {
+        'title': 'Showing Category',
+        'menu': MENU,
+        'posts': data_db,
+        'cat_selected': cat_id,
+    }
+    return render(request, 'women/index.html', context=data)
 
 
 def add_page(request: HttpRequest) -> HttpResponse:
