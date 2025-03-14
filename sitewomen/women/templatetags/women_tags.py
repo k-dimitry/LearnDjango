@@ -6,13 +6,13 @@ register = template.Library()
 
 @register.simple_tag(name='get_cats')
 def get_categories():
-    return views.cats_db
+    return views.CATS_DB
 
 
 @register.inclusion_tag('women/list_categories.html')
 def show_categories(cat_selected=0):
     data = {
-        'cats': views.cats_db,
+        'cats': views.CATS_DB,
         'cat_selected': cat_selected,
     }
     return data
