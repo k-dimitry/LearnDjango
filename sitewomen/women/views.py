@@ -2,7 +2,7 @@ from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 from django.urls.exceptions import Resolver404
 
-from .models import Woman
+from .models import Woman, Category
 
 MENU = [
     {'title': "About Site", 'url_name': 'about'},
@@ -21,12 +21,6 @@ DATA_DB = [
      'is_published': True},
     {'id': 2, 'title': 'Марго Робби', 'content': 'Биография Марго Робби', 'is_published': False},
     {'id': 3, 'title': 'Джулия Робертс', 'content': 'Биография Джулия Робертс', 'is_published': True},
-]
-
-CATS_DB = [
-    {'id': 1, 'name': 'Actresses'},
-    {'id': 2, 'name': 'Singers'},
-    {'id': 3, 'name': 'Sportswomen'},
 ]
 
 
@@ -62,12 +56,14 @@ def show_post(request: HttpRequest, post_slug: str) -> HttpResponse:
     return render(request, template_name='women/post.html', context=data)
 
 
-def show_category(request: HttpRequest, cat_id: int) -> HttpResponse:
+def show_category(request: HttpRequest, cat_slug: str) -> HttpResponse:
+    category = get_object_or_404(Category, slug=cat_slug)
+    posts = Woman.published.filter(cat_id=category.pk)
     data = {
-        'title': 'Showing Category',
+        'title': f'Category: {category.name}',
         'menu': MENU,
-        'posts': DATA_DB,
-        'cat_selected': cat_id,
+        'posts': posts,
+        'cat_selected': category.pk,
     }
     return render(request, template_name='women/index.html', context=data)
 
