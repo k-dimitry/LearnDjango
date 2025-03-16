@@ -9,7 +9,6 @@ class PublishedManager(models.Manager):
 
 
 class Woman(models.Model):
-
     class Status(models.IntegerChoices):
         DRAFT = 0, 'Draft'
         PUBLISHED = 1, 'Is published'
@@ -23,6 +22,7 @@ class Woman(models.Model):
 
     objects = models.Manager()
     published = PublishedManager()
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT)
 
     def __str__(self):
         return self.title
@@ -35,3 +35,11 @@ class Woman(models.Model):
         indexes = [
             models.Index(fields=['-time_created']),
         ]
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=255, unique=True, db_index=True)
+
+    def __str__(self):
+        return self.name
