@@ -2,7 +2,7 @@ from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 from django.urls.exceptions import Resolver404
 
-from .models import Woman, Category
+from .models import Woman, Category, TagPost
 
 MENU = [
     {'title': "About Site", 'url_name': 'about'},
@@ -82,3 +82,16 @@ def login(request: HttpRequest) -> HttpResponse:
 
 def page_not_found(request: HttpRequest, exception: Resolver404) -> HttpResponseNotFound:
     return HttpResponseNotFound('<h1>Page not found</h1>')
+
+
+def show_tag_postlist(request: HttpRequest, tag_slug: str) -> HttpResponse:
+    tag = get_object_or_404(TagPost, slug=tag_slug)
+    posts = tag.tags.filter(is_published=Woman.Status.PUBLISHED)
+    data = {
+        'title': f'Tag: {tag.tag}',
+        'menu': MENU,
+        'posts': posts,
+        'cat_selected': None,
+    }
+
+    return render(request, template_name='women/index.html', context=data)
