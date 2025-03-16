@@ -3,7 +3,7 @@ from django.urls import path, register_converter
 from . import views
 from . import converters
 
-register_converter(converters.FourDigitYearConverter, "year4")
+register_converter(converters.FourDigitYearConverter, type_name="year4")
 
 urlpatterns = [
     path('', views.index, name='home'),
