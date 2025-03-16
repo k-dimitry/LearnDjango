@@ -22,7 +22,7 @@ class Woman(models.Model):
 
     objects = models.Manager()
     published = PublishedManager()
-    cat = models.ForeignKey('Category', on_delete=models.PROTECT)
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name='posts')
 
     def __str__(self):
         return self.title
