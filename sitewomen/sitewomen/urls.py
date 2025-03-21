@@ -26,3 +26,6 @@ urlpatterns = [
 ] + debug_toolbar_urls()
 
 handler404 = page_not_found
+
+admin.site.site_header = 'Administrator Panel'
+admin.site.index_title = 'Famous women of the World'

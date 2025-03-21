@@ -36,6 +36,8 @@ class Woman(models.Model):
         indexes = [
             models.Index(fields=['-time_created']),
         ]
+        verbose_name_plural = 'Famous women'
+        verbose_name = 'Famous women'
 
 
 class Category(models.Model):
