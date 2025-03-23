@@ -6,6 +6,24 @@ from django.http import HttpRequest
 from .models import Woman, Category
 
 
+class MarriedFilter(admin.SimpleListFilter):
+    title = 'Woman status'
+    parameter_name = 'status'
+
+    def lookups(self, request: HttpRequest, model_admin: admin.ModelAdmin) -> list:
+        return [
+            ('married', 'Is married'),
+            ('single', 'Not married'),
+        ]
+
+    def queryset(self, request: HttpRequest, queryset: QuerySet) -> QuerySet:
+        if self.value() == 'married':
+            return queryset.filter(husband__isnull=False)
+        elif self.value() == 'single':
+            return queryset.filter(husband__isnull=True)
+        return queryset
+
+
 @admin.register(Woman)
 class WomanAdmin(admin.ModelAdmin):
     list_display = ('title', 'time_created', 'is_published', 'cat', 'brief_info')
@@ -14,6 +32,8 @@ class WomanAdmin(admin.ModelAdmin):
     list_editable = ('is_published',)
     list_per_page = 5
     actions = ('set_published', 'set_draft')
+    search_fields = ('title__startswith', 'cat__name')
+    list_filter = (MarriedFilter, 'cat__name', 'is_published')
 
     @admin.display(description='Brief Info', ordering=Length('content'))
     def brief_info(self, woman: Woman) -> str:
