@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from django.template.defaultfilters import slugify
+from unidecode import unidecode
 
 
 class PublishedManager(models.Manager):
@@ -33,6 +35,10 @@ class Woman(models.Model):
 
     def get_absolute_url(self):
         return reverse(viewname='post', kwargs={'post_slug': self.slug})
+
+    # def save(self, *args, **kwargs):
+    #     self.slug = slugify(unidecode(str(self.title)))
+    #     super().save(*args, **kwargs)
 
     class Meta:
         ordering = ['-time_created']
