@@ -2,7 +2,7 @@ from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls.exceptions import Resolver404
 
-from .forms import AddPostForm
+from .forms import AddPostForm, UploadFileForm
 from .models import Woman, Category, TagPost
 
 MENU = [
@@ -24,10 +24,23 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, template_name='women/index.html', context=data)
 
 
+def handle_uploaded_file(f):
+    with open(f'uploads/{f.name}', 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
+
+
 def about(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            handle_uploaded_file(form.cleaned_data['file'])
+    else:
+        form = UploadFileForm()
     data = {
         'title': 'About Site',
         'menu': MENU,
+        'form': form,
     }
     return render(request, template_name='women/about.html', context=data)
 
