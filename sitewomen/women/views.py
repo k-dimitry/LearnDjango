@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls.exceptions import Resolver404
 
 from .forms import AddPostForm, UploadFileForm
-from .models import Woman, Category, TagPost
+from .models import Woman, Category, TagPost, UploadFiles
 
 MENU = [
     {'title': "About Site", 'url_name': 'about'},
@@ -24,17 +24,19 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, template_name='women/index.html', context=data)
 
 
-def handle_uploaded_file(f):
-    with open(f'uploads/{f.name}', 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
+# def handle_uploaded_file(f):
+#     with open(f'uploads/{f.name}', 'wb+') as destination:
+#         for chunk in f.chunks():
+#             destination.write(chunk)
 
 
 def about(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            handle_uploaded_file(form.cleaned_data['file'])
+            # handle_uploaded_file(form.cleaned_data['file'])
+            fp = UploadFiles(file=form.cleaned_data['file'])
+            fp.save()
     else:
         form = UploadFileForm()
     data = {
@@ -72,7 +74,7 @@ def show_category(request: HttpRequest, cat_slug: str) -> HttpResponse:
 
 def add_page(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
-        form = AddPostForm(request.POST)
+        form = AddPostForm(request.POST, request.FILES)
         if form.is_valid():
             # try:
             #     Woman.objects.create(**form.cleaned_data)
