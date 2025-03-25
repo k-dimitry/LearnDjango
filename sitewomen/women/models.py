@@ -1,3 +1,4 @@
+from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
 from django.urls import reverse
 from django.template.defaultfilters import slugify
@@ -15,7 +16,10 @@ class Woman(models.Model):
         PUBLISHED = 1, 'Is published'
 
     title = models.CharField(max_length=255, verbose_name='Title')
-    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='Slug')
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='Slug', validators=(
+                               MinLengthValidator(limit_value=5, message='Required at least 5 symbols'),
+                               MaxLengthValidator(limit_value=100, message='Maximum is 100 symbols'),
+                           ))
     content = models.TextField(blank=True, verbose_name='Post Text')
     time_created = models.DateTimeField(auto_now_add=True, verbose_name='Time of Creation')
     time_updated = models.DateTimeField(auto_now=True, verbose_name='Time of Update')
