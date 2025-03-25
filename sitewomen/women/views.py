@@ -61,11 +61,13 @@ def add_page(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
         form = AddPostForm(request.POST)
         if form.is_valid():
-            try:
-                Woman.objects.create(**form.cleaned_data)
-                return redirect('home')
-            except:
-                form.add_error(field=None, error=f'Error when adding new post. Cleaned data is {form.cleaned_data}')
+            # try:
+            #     Woman.objects.create(**form.cleaned_data)
+            #     return redirect('home')
+            # except:
+            #     form.add_error(field=None, error=f'Error when adding new post. Cleaned data is {form.cleaned_data}')
+            form.save()
+            return redirect('home')
     else:
         form = AddPostForm()
 
