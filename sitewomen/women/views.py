@@ -1,5 +1,5 @@
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls.exceptions import Resolver404
 
 from .forms import AddPostForm
@@ -61,7 +61,12 @@ def add_page(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
         form = AddPostForm(request.POST)
         if form.is_valid():
-            print(form.cleaned_data)
+            # print(form.cleaned_data)
+            try:
+                Woman.objects.create(**form.cleaned_data)
+                return redirect('home')
+            except:
+                form.add_error(field=None, error='Error when adding new post')
     else:
         form = AddPostForm()
 
