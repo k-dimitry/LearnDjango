@@ -57,7 +57,11 @@ def show_category(request: HttpRequest, cat_slug: str) -> HttpResponse:
 
 
 def add_page(request: HttpRequest) -> HttpResponse:
-    return HttpResponse('Add an article')
+    data = {
+        'menu': MENU,
+        'title': 'Add an Article',
+    }
+    return render(request, template_name='women/add_page.html', context=data)
 
 
 def contact(request: HttpRequest) -> HttpResponse:
