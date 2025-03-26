@@ -2,6 +2,7 @@ from django.contrib import admin, messages
 from django.db.models import QuerySet
 from django.db.models.functions import Length
 from django.http import HttpRequest
+from django.utils.safestring import mark_safe
 
 from .models import Woman, Category
 
@@ -26,12 +27,12 @@ class MarriedFilter(admin.SimpleListFilter):
 
 @admin.register(Woman)
 class WomanAdmin(admin.ModelAdmin):
-    fields = ('title', 'slug', 'content', 'cat', 'husband', 'tags')
-    # readonly_fields = ('slug',)
+    fields = ('title', 'slug', 'content', 'photo', 'post_photo', 'cat', 'husband', 'tags')
+    readonly_fields = ('post_photo',)
     prepopulated_fields = {'slug': ('title',)}
     # filter_horizontal = ('tags',)
     filter_vertical = ('tags',)
-    list_display = ('title', 'time_created', 'is_published', 'cat', 'brief_info')
+    list_display = ('title', 'post_photo', 'time_created', 'is_published', 'cat')
     list_display_links = ('title',)
     ordering = ('-time_created', 'title')
     list_editable = ('is_published',)
@@ -39,10 +40,13 @@ class WomanAdmin(admin.ModelAdmin):
     actions = ('set_published', 'set_draft')
     search_fields = ('title__startswith', 'cat__name')
     list_filter = (MarriedFilter, 'cat__name', 'is_published')
+    save_on_top = True
 
-    @admin.display(description='Brief Info', ordering=Length('content'))
-    def brief_info(self, woman: Woman) -> str:
-        return f'Description: {len(woman.content)} symbols.'
+    @admin.display(description='Image', ordering=Length('content'))
+    def post_photo(self, woman: Woman) -> str:
+        if woman.photo:
+            return mark_safe(f'<img src="{woman.photo.url}" width=50>')
+        return 'No Photo'
 
     @admin.display(description='Publish selected Famous women')
     def set_published(self, request: HttpRequest, queryset: QuerySet):
