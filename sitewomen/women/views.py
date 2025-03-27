@@ -1,6 +1,8 @@
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls.exceptions import Resolver404
+from django.views import View
+from django.views.generic import TemplateView
 
 from .forms import AddPostForm, UploadFileForm
 from .models import Woman, Category, TagPost, UploadFiles
@@ -22,6 +24,16 @@ def index(request: HttpRequest) -> HttpResponse:
         'cat_selected': 0,
     }
     return render(request, template_name='women/index.html', context=data)
+
+
+class WomenHome(TemplateView):
+    template_name = 'women/index.html'
+    extra_context = {
+        'title': 'Main Page',
+        'menu': MENU,
+        'posts': Woman.published.all().select_related('cat'),
+        'cat_selected': 0,
+    }
 
 
 # def handle_uploaded_file(f):
@@ -92,6 +104,29 @@ def add_page(request: HttpRequest) -> HttpResponse:
         'form': form,
     }
     return render(request, template_name='women/add_page.html', context=data)
+
+
+class AddPage(View):
+    def get(self, request: HttpRequest) -> HttpResponse:
+        form = AddPostForm()
+        data = {
+            'menu': MENU,
+            'title': 'Add an Article',
+            'form': form,
+        }
+        return render(request, template_name='women/add_page.html', context=data)
+
+    def post(self, request: HttpRequest) -> HttpResponse:
+        form = AddPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        data = {
+            'menu': MENU,
+            'title': 'Add an Article',
+            'form': form,
+        }
+        return render(request, template_name='women/add_page.html', context=data)
 
 
 def contact(request: HttpRequest) -> HttpResponse:

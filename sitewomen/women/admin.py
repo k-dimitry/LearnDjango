@@ -27,7 +27,7 @@ class MarriedFilter(admin.SimpleListFilter):
 
 @admin.register(Woman)
 class WomanAdmin(admin.ModelAdmin):
-    fields = ('title', 'slug', 'content', 'photo', 'post_photo', 'cat', 'husband', 'tags')
+    fields = ('title', 'slug', 'content', 'photo', 'post_photo', 'cat', 'is_published', 'husband', 'tags')
     readonly_fields = ('post_photo',)
     prepopulated_fields = {'slug': ('title',)}
     # filter_horizontal = ('tags',)
