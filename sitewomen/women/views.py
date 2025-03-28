@@ -2,7 +2,7 @@ from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls.exceptions import Resolver404
 from django.views import View
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 
 from .forms import AddPostForm, UploadFileForm
 from .models import Woman, Category, TagPost, UploadFiles
@@ -15,25 +15,30 @@ MENU = [
 ]
 
 
-def index(request: HttpRequest) -> HttpResponse:
-    posts = Woman.published.all().select_related('cat')
-    data = {
-        'title': 'Main Page',
-        'menu': MENU,
-        'posts': posts,
-        'cat_selected': 0,
-    }
-    return render(request, template_name='women/index.html', context=data)
+# def index(request: HttpRequest) -> HttpResponse:
+#     posts = Woman.published.all().select_related('cat')
+#     data = {
+#         'title': 'Main Page',
+#         'menu': MENU,
+#         'posts': posts,
+#         'cat_selected': 0,
+#     }
+#     return render(request, template_name='women/index.html', context=data)
 
 
-class WomenHome(TemplateView):
+class WomenHome(ListView):
+    # model = Woman
     template_name = 'women/index.html'
+    context_object_name = 'posts'
     extra_context = {
         'title': 'Main Page',
         'menu': MENU,
-        'posts': Woman.published.all().select_related('cat'),
+        # 'posts': Woman.published.all().select_related('cat'),
         'cat_selected': 0,
     }
+
+    def get_queryset(self):
+        return Woman.published.all().select_related('cat')
 
 
 # def handle_uploaded_file(f):
@@ -72,38 +77,55 @@ def show_post(request: HttpRequest, post_slug: str) -> HttpResponse:
     return render(request, template_name='women/post.html', context=data)
 
 
-def show_category(request: HttpRequest, cat_slug: str) -> HttpResponse:
-    category = get_object_or_404(Category, slug=cat_slug)
-    posts = Woman.published.filter(cat_id=category.pk).select_related('cat')
-    data = {
-        'title': f'Category: {category.name}',
-        'menu': MENU,
-        'posts': posts,
-        'cat_selected': category.pk,
-    }
-    return render(request, template_name='women/index.html', context=data)
+# def show_category(request: HttpRequest, cat_slug: str) -> HttpResponse:
+#     category = get_object_or_404(Category, slug=cat_slug)
+#     posts = Woman.published.filter(cat_id=category.pk).select_related('cat')
+#     data = {
+#         'title': f'Category: {category.name}',
+#         'menu': MENU,
+#         'posts': posts,
+#         'cat_selected': category.pk,
+#     }
+#     return render(request, template_name='women/index.html', context=data)
 
 
-def add_page(request: HttpRequest) -> HttpResponse:
-    if request.method == 'POST':
-        form = AddPostForm(request.POST, request.FILES)
-        if form.is_valid():
-            # try:
-            #     Woman.objects.create(**form.cleaned_data)
-            #     return redirect('home')
-            # except:
-            #     form.add_error(field=None, error=f'Error when adding new post. Cleaned data is {form.cleaned_data}')
-            form.save()
-            return redirect('home')
-    else:
-        form = AddPostForm()
+class WomenCategory(ListView):
+    template_name = 'women/index.html'
+    context_object_name = 'posts'
+    allow_empty = False
 
-    data = {
-        'menu': MENU,
-        'title': 'Add an Article',
-        'form': form,
-    }
-    return render(request, template_name='women/add_page.html', context=data)
+    def get_queryset(self):
+        return Woman.published.filter(cat__slug=self.kwargs['cat_slug']).select_related('cat')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        cat = context['posts'][0].cat
+        context['title'] = f'Category: {cat.name}'
+        context['menu'] = MENU
+        context['cat_selected'] = cat.pk
+        return context
+
+
+# def add_page(request: HttpRequest) -> HttpResponse:
+#     if request.method == 'POST':
+#         form = AddPostForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             # try:
+#             #     Woman.objects.create(**form.cleaned_data)
+#             #     return redirect('home')
+#             # except:
+#             #     form.add_error(field=None, error=f'Error when adding new post. Cleaned data is {form.cleaned_data}')
+#             form.save()
+#             return redirect('home')
+#     else:
+#         form = AddPostForm()
+#
+#     data = {
+#         'menu': MENU,
+#         'title': 'Add an Article',
+#         'form': form,
+#     }
+#     return render(request, template_name='women/add_page.html', context=data)
 
 
 class AddPage(View):
@@ -152,3 +174,20 @@ def show_tag_postlist(request: HttpRequest, tag_slug: str) -> HttpResponse:
     }
 
     return render(request, template_name='women/index.html', context=data)
+
+
+class WomenTagView(ListView):
+    template_name = 'women/index.html'
+    context_object_name = 'posts'
+    allow_empty = False
+
+    def get_queryset(self):
+        return Woman.published.filter(tags__slug=self.kwargs['tag_slug']).select_related('cat')
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        tag = context['posts'][0].tags.all()[0]
+        context['title'] = f'Тег - {tag.tag}'
+        context['menu'] = MENU
+        context['cat_selected'] = None
+        return context
