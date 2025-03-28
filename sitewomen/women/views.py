@@ -1,12 +1,11 @@
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 from django.urls.exceptions import Resolver404
-from django.views import View
-from django.views.generic import ListView, DetailView, FormView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from .forms import AddPostForm, UploadFileForm
-from .models import Woman, Category, TagPost, UploadFiles
+from .models import Woman, TagPost, UploadFiles
 
 MENU = [
     {'title': "About Site", 'url_name': 'about'},
@@ -74,7 +73,6 @@ def about(request: HttpRequest) -> HttpResponse:
 #         'post': post,
 #         'cat_selected': 1
 #     }
-#
 #     return render(request, template_name='women/post.html', context=data)
 
 
@@ -168,18 +166,39 @@ class WomenCategory(ListView):
 #         return render(request, template_name='women/add_page.html', context=data)
 
 
-class AddPage(FormView):
+class AddPage(CreateView):
     form_class = AddPostForm
+    # model = Woman
+    # fields = ('title', 'slug', 'content', 'photo', 'is_published', 'cat')
     template_name = 'women/add_page.html'
-    success_url = reverse_lazy('home')
+    # success_url = reverse_lazy('home')
     extra_context = {
         'title': 'Adding a Post',
         'menu': MENU
     }
 
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
+
+class UpdatePage(UpdateView):
+    model = Woman
+    fields = ('title', 'content', 'photo', 'is_published', 'cat')
+    template_name = 'women/add_page.html'
+    success_url = reverse_lazy('home')
+    extra_context = {
+        'title': 'Editing a Post',
+        'menu': MENU
+    }
+
+
+class DeletePage(DeleteView):
+    model = Woman
+    # fields = ('title', 'content', 'photo', 'is_published', 'cat')
+    template_name = 'women/delete_post.html'
+    context_object_name = 'post'
+    success_url = reverse_lazy('home')
+    extra_context = {
+        'menu': MENU,
+        'title': 'Deleting a Post',
+    }
 
 
 def contact(request: HttpRequest) -> HttpResponse:
@@ -203,7 +222,6 @@ def page_not_found(request: HttpRequest, exception: Resolver404) -> HttpResponse
 #         'posts': posts,
 #         'cat_selected': None,
 #     }
-#
 #     return render(request, template_name='women/index.html', context=data)
 
 
