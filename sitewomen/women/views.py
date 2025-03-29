@@ -1,11 +1,12 @@
+from django.core.paginator import Paginator
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.urls.exceptions import Resolver404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import AddPostForm, UploadFileForm
-from .models import Woman, TagPost, UploadFiles
+from .forms import AddPostForm
+from .models import Woman, TagPost
 from .utils import DataMixin, MENU
 
 
@@ -20,18 +21,16 @@ class WomenHome(DataMixin, ListView):
 
 
 def about(request: HttpRequest) -> HttpResponse:
-    if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            # handle_uploaded_file(form.cleaned_data['file'])
-            fp = UploadFiles(file=form.cleaned_data['file'])
-            fp.save()
-    else:
-        form = UploadFileForm()
+    contact_list = Woman.published.all()
+    paginator = Paginator(contact_list, per_page=3)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     data = {
         'title': 'About Site',
         'menu': MENU,
-        'form': form,
+        'page_obj': page_obj,
     }
     return render(request, template_name='women/about.html', context=data)
 
