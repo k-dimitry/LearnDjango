@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'women.apps.WomenConfig',
+    'users.apps.UsersConfig',
     'debug_toolbar',
 ]
 
