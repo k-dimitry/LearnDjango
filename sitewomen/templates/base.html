@@ -19,8 +19,19 @@
 {% for m in mainmenu %}
 		<li><a href="{% url m.url_name %}">{{m.title}}</a></li>
 {% endfor %}
+
 {% if user.is_authenticated %}
-<li class="last"> {{ user.username }} | <a href="{% url 'users:logout' %}">Logout</a></li>
+
+<li class="last">{{ user.username }} |
+    <form method="post" action="{% url 'users:logout' %}" style="display: inline;">
+        {% csrf_token %}
+        <button id="logout_button" type="submit" style="background:none; border:none; color:#FDC073; cursor:pointer;
+					font-size: 20px; font-family: Arial;">
+            Logout
+        </button>
+    </form>
+</li>
+
 {% else %}
 <li class="last"><a href="{% url 'users:login' %}">Login</a> | <a href="#">Register</a></li>
 {% endif %}
