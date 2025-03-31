@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
@@ -20,6 +22,7 @@ class WomenHome(DataMixin, ListView):
         return Woman.published.all().select_related('cat')
 
 
+@login_required
 def about(request: HttpRequest) -> HttpResponse:
     contact_list = Woman.published.all()
     paginator = Paginator(contact_list, per_page=3)
@@ -66,10 +69,15 @@ class WomenCategory(DataMixin, ListView):
         )
 
 
-class AddPage(DataMixin, CreateView):
+class AddPage(LoginRequiredMixin, DataMixin, CreateView):
     form_class = AddPostForm
     template_name = 'women/add_page.html'
     title_page = 'Adding a Post'
+
+    def form_valid(self, form):
+        w = form.save(commit=False)
+        w.author = self.request.user
+        return super().form_valid(form)
 
 
 class UpdatePage(DataMixin, UpdateView):
