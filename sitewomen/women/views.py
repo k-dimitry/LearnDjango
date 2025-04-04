@@ -1,5 +1,5 @@
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
@@ -69,10 +69,11 @@ class WomenCategory(DataMixin, ListView):
         )
 
 
-class AddPage(LoginRequiredMixin, DataMixin, CreateView):
+class AddPage(PermissionRequiredMixin, LoginRequiredMixin, DataMixin, CreateView):
     form_class = AddPostForm
     template_name = 'women/add_page.html'
     title_page = 'Adding a Post'
+    permission_required = 'women.add_woman'
 
     def form_valid(self, form):
         w = form.save(commit=False)
@@ -80,12 +81,13 @@ class AddPage(LoginRequiredMixin, DataMixin, CreateView):
         return super().form_valid(form)
 
 
-class UpdatePage(DataMixin, UpdateView):
+class UpdatePage(PermissionRequiredMixin, DataMixin, UpdateView):
     model = Woman
     fields = ('title', 'content', 'photo', 'is_published', 'cat')
     template_name = 'women/add_page.html'
     success_url = reverse_lazy('home')
     title_page = 'Editing a Post'
+    permission_required = 'women.change_woman'
 
 
 class DeletePage(DataMixin, DeleteView):
@@ -97,6 +99,7 @@ class DeletePage(DataMixin, DeleteView):
     title_page = 'Deleting a Post'
 
 
+@permission_required(perm='women.view_woman', raise_exception=True)
 def contact(request: HttpRequest) -> HttpResponse:
     return HttpResponse('Contact us')
 
