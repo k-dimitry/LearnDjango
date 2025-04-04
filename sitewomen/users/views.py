@@ -4,6 +4,7 @@ from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
 
+from sitewomen import settings
 from .forms import LoginUserForm, RegisterUserForm, ProfileUserForm, UserPasswordChangeForm
 
 
@@ -29,7 +30,8 @@ class ProfileUser(LoginRequiredMixin, UpdateView):
     form_class = ProfileUserForm
     template_name = 'users/profile.html'
     extra_context = {
-        'title': 'User profile'
+        'title': 'User profile',
+        'default_image': settings.DEFAULT_USER_IMAGE,
     }
 
     def get_success_url(self):
