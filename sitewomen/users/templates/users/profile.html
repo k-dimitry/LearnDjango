@@ -8,7 +8,7 @@
     {% if user.photo %}
     <p><img src="{{ user.photo.url }}" alt="user photo"></p>
     {% else %}
-        <p><img src="{{ default_image }}" alt="user photo"></p>
+        <p><img src="{{ default_image }}" alt="user photo" width="100" height="100"></p>
     {% endif %}
     <div class="form-error">{{ form.non_field_errors }}</div>
     {% for f in form %}
@@ -20,7 +20,10 @@
         <button type="submit">Save</button>
     </p>
 </form>
+
+{% if not perms.users.social_auth %}
 <hr>
 <p><a href="{% url 'users:password_change' %}">Change password</a></p>
+{% endif %}
 
 {% endblock %}
