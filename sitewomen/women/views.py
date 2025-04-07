@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.urls.exceptions import Resolver404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, FormView
+from django.core.cache import cache
 
 from .forms import AddPostForm, ContactForm
 from .models import Woman, TagPost
@@ -19,7 +20,11 @@ class WomenHome(DataMixin, ListView):
     cat_selected = 0
 
     def get_queryset(self):
-        return Woman.published.all().select_related('cat')
+        w_list = cache.get('women_posts')
+        if not w_list:
+            w_list = Woman.published.all().select_related('cat')
+            cache.set('women_posts', w_list, 60)
+        return w_list
 
 
 @login_required
