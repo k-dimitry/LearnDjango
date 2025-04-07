@@ -16,11 +16,19 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 from debug_toolbar.toolbar import debug_toolbar_urls
+from django.views.decorators.cache import cache_page
 
 from sitewomen import settings
+from women.sitemaps import PostSitemap, CategorySitemap
 from women.views import page_not_found
+
+sitemaps = {
+    'posts': PostSitemap,
+    'cats': CategorySitemap,
+}
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
@@ -28,6 +36,7 @@ urlpatterns = [
                   path('users/', include('users.urls', namespace='users')),
                   path('social-auth/', include('social_django.urls', namespace="social")),
                   path('captcha/', include('captcha.urls')),
+                  path('sitemap.xml', cache_page(30 * 60 * 60)(sitemap), {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
               ] + debug_toolbar_urls()
 
 if settings.DEBUG:
