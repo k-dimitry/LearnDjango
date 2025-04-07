@@ -1,0 +1,310 @@
+[
+{
+  "model": "women.woman",
+  "pk": 1,
+  "fields": {
+    "title": "Angelina Jolie",
+    "slug": "angelina-jolie",
+    "photo": "photos/2025/04/04/Angelina_Jolie.jpg",
+    "content": "Angelina Jolie[3] (/dʒoʊˈliː/ joh-LEE; born Angelina Jolie Voight,[4] /ˈvɔɪt/; June 4, 1975) is an American actress, filmmaker, and humanitarian. The recipient of numerous accolades, including two Academy Awards, a Tony Award and three Golden Globe Awards, she has been named Hollywood's highest-paid actress multiple times.\r\n\r\nJolie made her screen debut as a child alongside her father, Jon Voight, in Lookin' to Get Out (1982). Her film career began in earnest a decade later with the low-budget production Cyborg 2 (1993), followed by her first leading role in Hackers (1995). After starring in the television films George Wallace (1997) and Gia (1998), Jolie won the Academy Award for Best Supporting Actress for the 1999 drama Girl, Interrupted. Her portrayal of the titular heroine in Lara Croft: Tomb Raider (2001) established her as a leading lady. Jolie's success continued with roles in the action films Mr. & Mrs. Smith (2005), Wanted (2008), and Salt (2010), as well as in the fantasy film Maleficent (2014) and its 2019 sequel. She also had voice roles in the animated films Shark Tale (2004) and Kung Fu Panda franchise (2008–2016), and gained praise for her dramatic performances in A Mighty Heart (2007), Changeling (2008), which earned her a nomination for the Academy Award for Best Actress, and Maria (2024).\r\n\r\nAs a filmmaker, Jolie directed and wrote the war dramas In the Land of Blood and Honey (2011), Unbroken (2014), First They Killed My Father (2017) and Without Blood (2024). She also produced the musical The Outsiders (2024), winning the Tony Award for Best Musical.\r\n\r\nJolie is known for her humanitarian efforts. The causes she promotes include conservation, education, and women's rights. She has been noted for her advocacy on behalf of refugees as a Special Envoy for the United Nations High Commissioner for Refugees. She has undertaken field missions to refugee camps and war zones worldwide. In addition to receiving a Jean Hersholt Humanitarian Award among other honors, Jolie was made an honorary Dame Commander of the Order of St Michael and St George. As a public figure, Jolie has been cited as one of the most powerful and influential people in the American entertainment industry. She has been cited as the world's most beautiful woman by various publications. Her personal life, including her relationships and health, has been the subject of widespread attention. Jolie is divorced from actors Jonny Lee Miller, Billy Bob Thornton, and Brad Pitt. She has six children with Pitt.",
+    "time_created": "2025-04-04T14:38:40.479Z",
+    "time_updated": "2025-04-04T14:38:40.479Z",
+    "is_published": true,
+    "cat": 1,
+    "husband": 1,
+    "author": 1,
+    "tags": [
+      2,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 2,
+  "fields": {
+    "title": "Margot Robbie",
+    "slug": "margot-robbie",
+    "photo": "photos/2025/04/04/margot_robbie.jpg",
+    "content": "Margot Elise Robbie (/ˈmɑːrɡoʊ ˈrɒbi/ MAR-goh ROB-ee; born 2 July 1990) is an Australian actress and producer. Her work includes both blockbuster and independent films, and her accolades include nominations for three Academy Awards, four Golden Globe Awards and six BAFTA Awards. Time named her one of the 100 most influential people in the world in 2017, and Forbes named her the world's highest-paid actress in 2023.\r\n\r\nBorn and raised in Queensland, Robbie began her career in 2008 on the television series Neighbours, on which she was a regular until 2011. After moving to the United States, she led the television series Pan Am (2011–2012) and had her breakthrough in 2013 with Martin Scorsese's black comedy film The Wolf of Wall Street. She achieved wider recognition with starring roles as Jane Porter in The Legend of Tarzan (2016), and as Harley Quinn in the DC Extended Universe films beginning with Suicide Squad (2016).\r\n\r\nRobbie received critical acclaim and a nomination for the Academy Award for Best Actress for her portrayal of figure skater Tonya Harding in the biopic I, Tonya (2017). This acclaim continued for her performances as Queen Elizabeth I in Mary Queen of Scots (2018), Sharon Tate in Once Upon a Time in Hollywood (2019), and a Fox News employee in Bombshell (2019). The last of these earned her a nomination for the Academy Award for Best Supporting Actress. Robbie has since starred as an aspiring actress in the period film Babylon (2022) and the titular fashion doll in the fantasy comedy Barbie (2023), which emerged as her highest-grossing release and, as its producer, earned her a nomination for the Academy Award for Best Picture.\r\n\r\nRobbie and her husband, filmmaker Tom Ackerley, co-founded the production company LuckyChap Entertainment in 2014, under which they have produced several films, including I, Tonya, Promising Young Woman (2020), Barbie, and Saltburn (2023), as well as the Hulu series Dollface (2019–2022) and the Netflix miniseries Maid (2021).",
+    "time_created": "2025-04-04T14:40:23.544Z",
+    "time_updated": "2025-04-04T14:40:23.544Z",
+    "is_published": true,
+    "cat": 1,
+    "husband": 2,
+    "author": 1,
+    "tags": [
+      1,
+      3,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 3,
+  "fields": {
+    "title": "Julia Roberts",
+    "slug": "julia-roberts",
+    "photo": "photos/2025/04/04/julia_roberts.jpg",
+    "content": "Julia Fiona Roberts (born October 28, 1967)[1] is an American actress. Known for her leading roles across various genres, she has received multiple accolades, including an Academy Award, a British Academy Film Award, and three Golden Globe Awards. She became known for portraying charming and relatable characters in romantic comedies and blockbusters, before expanding into dramas, thrillers, and independent films. The films in which she has starred have collectively grossed over $3.9 billion worldwide, making her one of Hollywood’s most bankable stars,[2] while the media nicknamed her \"America’s Sweetheart\" in recognition of her widespread popularity and on- and off-screen charisma.\r\n\r\nAfter early breakthroughs in Mystic Pizza (1988) and Steel Magnolias (1989), Roberts solidified her status as a leading lady when she starred in the top-grossing romantic comedy Pretty Woman (1990). She went on to star in several commercially successful films throughout the 1990s, including the romantic comedies My Best Friend's Wedding (1997), Notting Hill (1999), and Runaway Bride (1999). Roberts won the Academy Award for Best Actress for her portrayal of the title role in the biographical drama Erin Brockovich (2000). In the following decades, she continued her film success with roles in Ocean's Eleven (2001), Ocean's Twelve (2004), Charlie Wilson's War (2007), Valentine's Day (2010), Eat Pray Love (2010), August: Osage County (2013), Wonder (2017), Ticket to Paradise (2022), and Leave the World Behind (2023). Roberts also earned a Primetime Emmy Award nomination for her role in the HBO television film The Normal Heart (2014), made her first regular television appearance in the first season of the Amazon Prime Video psychological thriller series Homecoming (2018), and portrayed Martha Mitchell in the Starz political limited series Gaslit (2022).\r\n\r\nIn addition to acting, Roberts runs the production company Red Om Films, through which she has served as an executive producer for various projects she has starred in, as well as for the first four films of the American Girl franchise (2004–2008). She has acted as the global ambassador for Lancôme since 2009. She was the world's highest-paid actress throughout the majority of the 1990s and the first half of the 2000s.[3][4][5] She received a then-unprecedented fees of $20 million and $25 million for her roles in Erin Brockovich (2000) and Mona Lisa Smile (2003), respectively. As of 2020, Roberts's net worth was estimated to be $250 million.[6] People magazine has named her the most beautiful woman in the world a record five times.[7]",
+    "time_created": "2025-04-04T14:41:41.247Z",
+    "time_updated": "2025-04-04T14:41:41.247Z",
+    "is_published": true,
+    "cat": 1,
+    "husband": 3,
+    "author": 1,
+    "tags": [
+      1,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 4,
+  "fields": {
+    "title": "Jennifer Lawrence",
+    "slug": "jennifer-lawrence",
+    "photo": "photos/2025/04/04/Jennifer_Lawrence.jpg",
+    "content": "Jennifer Shrader Lawrence (born August 15, 1990) is an American actress and producer. She is known for starring in both action film franchises and independent dramas, and her films have grossed over $6 billion worldwide. The world's highest-paid actress in 2015 and 2016, she appeared in Time's 100 most influential people in the world list in 2013 and the Forbes Celebrity 100 list from 2013 to 2016.\r\n\r\nLawrence began her career as a teenager with guest roles on television. Her first major role was as a main cast member on the sitcom The Bill Engvall Show (2007–2009). She made her film debut with a supporting role in the drama Garden Party (2008) and had her breakthrough playing a poverty-stricken teenager in the independent film Winter's Bone (2010). Lawrence gained stardom portraying the mutant Mystique in the X-Men film series (2011–2019) and Katniss Everdeen in The Hunger Games film series (2012–2015). The latter made her the highest-grossing action heroine.\r\n\r\nLawrence collaborated with filmmaker David O. Russell on three films, which earned her various accolades. For portraying a troubled young widow in the romance Silver Linings Playbook (2012), she won the Academy Award for Best Actress, becoming the second-youngest winner in the category at age 22. Lawrence won the BAFTA Award for Best Actress in a Supporting Role for playing an unpredictable wife in the black comedy American Hustle (2013). She also received Golden Globe Awards for both, and for portraying businesswoman Joy Mangano in the biopic Joy (2015). A series of mixed reviewed films and the media scrutiny of her role choices led to a small break from acting. Lawrence returned with the black comedy Don't Look Up (2021), after which she produced and starred in the drama Causeway (2022) and the comedy No Hard Feelings (2023).\r\n\r\nLawrence is a feminist and advocates for women's reproductive rights. In 2015, she founded the Jennifer Lawrence Foundation, which advocates for the Boys & Girls Clubs of America and the Special Olympics. She is also an active member of the anti-corruption organization RepresentUs. Lawrence formed the production company Excellent Cadaver in 2018.",
+    "time_created": "2025-04-04T14:43:12.949Z",
+    "time_updated": "2025-04-04T14:43:12.949Z",
+    "is_published": true,
+    "cat": 1,
+    "husband": 4,
+    "author": 1,
+    "tags": [
+      1,
+      3,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 5,
+  "fields": {
+    "title": "Ariana Grande",
+    "slug": "ariana-grande",
+    "photo": "photos/2025/04/04/ariana_grande.jpg",
+    "content": "Ariana Grande-Butera (/.ɑːriˈɑːnə ˈɡrɑːndeɪ bjʊˈtɛərə/ ⓘ AR-ee-AH-nə GRAHN-day byuu-TAIR-ə;[note 1] born June 26, 1993) is an American singer, songwriter, and actress. Regarded as a pop icon and an influential figure in popular music, Grande is known for her four-octave vocal range, which extends into the whistle register.\r\n\r\nGrande began her career as a teenage actress by appearing in the Broadway musical 13 (2008), and rose to fame as Cat Valentine in the Nickelodeon television series Victorious (2010–2013) and its spin-off series Sam & Cat (2013–2014). She signed with Republic Records and released her retro-pop and R&B-influenced debut studio album, Yours Truly (2013), which debuted at number one on the Billboard 200. Grande blended pop, R&B, and electronic on her second and third albums, My Everything (2014) and Dangerous Woman (2016), both of which contained the internationally successful singles \"Problem\", \"Break Free\", \"Bang Bang\", \"One Last Time\", \"Into You\" and \"Side to Side\".\r\n\r\nPersonal struggles influenced Grande's trap-infused albums Sweetener (2018) and Thank U, Next (2019). The former won Grande her first Grammy award, while the latter garnered US number-one singles \"Thank U, Next\" and \"7 Rings\", and made her the first solo artist to occupy the top three spots of the Billboard Hot 100. She subsequently achieved the most number-one debuts in Hot 100 chart history with the title track of her sixth album, Positions (2020), as well as the collaborations \"Stuck with U\" and \"Rain on Me\". With the remixes of the Weeknd's \"Save Your Tears\" and \"Die for You\", she broke the record for the most number-one duets in the US. After a musical hiatus, Grande released her seventh album, Eternal Sunshine (2024), which spawned the US number-one singles \"Yes, And?\" and \"We Can't Be Friends (Wait for Your Love)\". She returned to film acting with the political satire Don't Look Up (2021) and received critical praise for her portrayal of Glinda in the fantasy musical Wicked (2024), earning her a nomination for the Academy Award for Best Supporting Actress.\r\n\r\nAmong the world's best-selling music artists, Grande has sold over 90 million records worldwide and is the fifth-highest-certified digital singles female artist. Her accolades include two Grammy Awards, a Brit Award, two Billboard Music Awards, three American Music Awards, ten MTV Video Music Awards, and thirty-seven Guinness World Records. With six Billboard 200 number-one albums and nine Billboard Hot 100 number-one singles, the magazine named her the ninth-greatest pop star of the 21st century and the most successful female artist to emerge in the 2010s. Forbes ranked her as the world's highest-paid female musician in 2020. She was featured in listicles such as Rolling Stone's greatest singers of all time (2023), Time 100 (2016 and 2019), and Celebrity 100 (2019–2020). Outside of music and acting, Grande has worked with many charitable organizations and advocates for animal rights, mental health, and gender, racial, and LGBT equality. Her business ventures include R.E.M. Beauty, a cosmetics brand launched in 2021, and a fragrance line that has earned over $1 billion in global retail sales. She has a large social media following, being the sixth-most-followed individual on Instagram.",
+    "time_created": "2025-04-04T14:45:32.505Z",
+    "time_updated": "2025-04-04T14:45:32.505Z",
+    "is_published": true,
+    "cat": 2,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      2,
+      7
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 6,
+  "fields": {
+    "title": "Ekaterina Guseva",
+    "slug": "ekaterina-guseva",
+    "photo": "photos/2025/04/04/Ekaterina_Guseva.jpeg",
+    "content": "Yekaterina Konstantinovna Guseva (Russian: Екатери́на Константи́новна Гу́сева; 9 July 1976) is a Russian film, theater, TV actress and singer, Meritorious Artist of Russia.[1] She became famous for her role in the 2002 television series Brigada.\r\n\r\nEarly life\r\nIn Guseva's childhood, her father played the violin; it was his violin depicted in the series Brigada. Her younger sister, Nastya, works as a methodologist in a kindergarten.[2]\r\n\r\nBy age four, she was already part of the modern gymnastics resource group for the Soviet Union's representative team. She also tried figure skating and swimming. Seven years before finishing school, Katya was involved in the Georgian dance ensemble Kolkhida and managed to perform in the Bolshoi.[3]\r\n\r\nWhile planning to enroll at the Moscow Biotechnology Institute, she was approached by an assistant to theatre director Evgeny Simonov who suggested she should apply for the V.V. Shukina Performing Arts College. She gave it a try, prepared for the entry exam during three days, and made it with ease.[4]",
+    "time_created": "2025-04-04T14:47:45.271Z",
+    "time_updated": "2025-04-04T14:47:45.271Z",
+    "is_published": true,
+    "cat": 1,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 7,
+  "fields": {
+    "title": "Uma Thurman",
+    "slug": "uma-thurman",
+    "photo": "photos/2025/04/04/Uma_Thurman.jpg",
+    "content": "Uma Karuna Thurman (born April 29, 1970) is an American actress. She has performed in a variety of films, from romantic comedies and dramas to science fiction and action films. Following her appearances on the December 1985 and May 1986 covers of British Vogue, Thurman starred in Dangerous Liaisons (1988). She rose to international prominence with her performance as Mia Wallace in Quentin Tarantino's 1994 film Pulp Fiction,[1] for which she was nominated for an Academy Award, a BAFTA Award, a Golden Globe Award, and a Screen Actors Guild Award for Best Supporting Actress. Often hailed as Tarantino's muse,[2] she reunited with the director to play the main role in Kill Bill: Volume 1 and 2 (2003, 2004),[3] which brought her a BAFTA Award nomination and two additional Golden Globe Award nominations.[4][5]\r\n\r\nEstablished as a Hollywood actress,[6] Thurman's other notable films include Henry & June (1990), The Truth About Cats & Dogs (1996), Batman & Robin (1997), Gattaca (1997), Les Misérables (1998), Paycheck (2003), The Producers (2005), My Super Ex-Girlfriend (2006), Percy Jackson & the Olympians: The Lightning Thief (2010), Lars von Trier's Nymphomaniac (2013),[7] The House That Jack Built (2018), and Hollywood Stargirl (2022).[8] In 2011, she was a member of the jury for the main competition at the 64th Cannes Film Festival,[9] and in 2017, she was named president of the 70th edition's \"Un Certain Regard\" jury. Thurman made her Broadway debut in The Parisian Woman (2017–2018).\r\n\r\nThurman won the Golden Globe Award for Best Actress in a Television Film for her performance in the made-for-HBO film Hysterical Blindness (2002) and received a Primetime Emmy Award nomination for Outstanding Guest Actress in a Drama Series for her five-episode role in the NBC musical series Smash (2012).[10] She also starred in the miniseries The Slap (2015) and the series Imposters (2017–2018), Chambers (2019) and Super Pumped (2022).",
+    "time_created": "2025-04-04T14:48:57.488Z",
+    "time_updated": "2025-04-04T14:48:57.489Z",
+    "is_published": true,
+    "cat": 1,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 8,
+  "fields": {
+    "title": "Rihanna",
+    "slug": "rihanna",
+    "photo": "photos/2025/04/04/Rihanna-Diamonds-Video.jpg",
+    "content": "Robyn Rihanna Fenty (/riˈænə/ ⓘ ree-AN-ə;[3][4][n 1] born February 20, 1988) is a Barbadian singer, businesswoman, and actress. She is the best-selling female recording artist of the 21st century by Guinness World Records and the highest-certified female digital single artist by RIAA. As of 2024, Rihanna is the third wealthiest musician in the world. She has seven U.S. diamond certified singles and 14 number-one singles on the Billboard Hot 100. The recipient of various accolades, Rihanna is one of the best-selling recording artists of all time, with sales estimated at 250 million units globally.\r\n\r\nRihanna signed with Def Jam Recordings in 2005 and found mainstream recognition following the release of her first two studio albums, Music of the Sun (2005) and A Girl Like Me (2006). Both influenced by Caribbean music, the albums peaked within the top ten on the US Billboard 200 chart. Her third album, Good Girl Gone Bad (2007), incorporated elements of dance-pop, and established her status as a pop icon. Its lead single \"Umbrella\" peaked atop the US Billboard Hot 100 and won her first Grammy Award.\r\n\r\nRihanna continued to blend pop, dance, and R&B influences on her next albums, Rated R (2009), Loud (2010), Talk That Talk (2011), and Unapologetic (2012)—the latter of which topped the Billboard 200. The albums spawned the Billboard Hot 100-number one singles \"Rude Boy\", \"Only Girl (In the World)\", \"What's My Name?\", \"S&M\", \"We Found Love\", and \"Diamonds\". Her eighth album, Anti (2016), showcased new creative control following her departure from Def Jam in favor of Jay-Z's label, Roc Nation. Becoming her second US number one album, it was supported by the chart-topping single \"Work\".\r\n\r\nAside from music, Rihanna is recognized for her humanitarian involvement, entrepreneurship, and fashion industry influence. She established the Clara Lionel Foundation, cosmetics brand Fenty Beauty, and fashion house Fenty under LVMH, becoming the first black woman to lead a luxury brand for LVMH.[5] Rihanna has acted in major roles in Battleship (2012), Home (2015), Valerian and the City of a Thousand Planets (2017), and Ocean's 8 (2018). In 2018, she was appointed as an ambassador by the Government of Barbados and declared a National Hero of Barbados in 2021.[6]",
+    "time_created": "2025-04-04T14:50:49.539Z",
+    "time_updated": "2025-04-04T14:50:49.539Z",
+    "is_published": true,
+    "cat": 2,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      2,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 9,
+  "fields": {
+    "title": "Beyoncé",
+    "slug": "beyonce",
+    "photo": "photos/2025/04/04/beyonce.jpeg",
+    "content": "Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] née Knowles; born September 4, 1981) is an American singer, songwriter, actress and businesswoman. She has had a significant impact on the music industry and is known for her vocal ability, musical versatility, live performances, and culturally important works.\r\n\r\nBeyoncé rose to fame in 1997 as a member of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century and spawned the U.S. Billboard Hot 100 number-one singles \"Crazy in Love\" and \"Baby Boy\". Beyoncé's commercial success continued with the albums B'Day (2006), I Am... Sasha Fierce (2008) and 4 (2011), all of which featured hit singles including \"Check on It\", \"Irreplaceable\", \"If I Were a Boy\", \"Single Ladies (Put a Ring on it)\", \"Halo\", \"Run the World (Girls)\", and \"Love On Top\". She has also ventured into acting, starring in the films Austin Powers in Goldmember (2002), Dreamgirls (2006), Cadillac Records (2008), Obsessed (2009) and Black Is King (2020), as well as voicing Nala in The Lion King (2019) and Mufasa: The Lion King (2024).\r\n\r\nBeyoncé's career shifted after forming her own management company Parkwood Entertainment, creating monocultural events through acclaimed concept albums.[7] She explored personal and political themes on Beyoncé (2013) and Lemonade (2016), which are credited with popularizing the surprise album and visual album. The former inspired setting Friday as the Global Release Day, while the latter was the best-selling album worldwide in 2016. Her ongoing trilogy project – currently consisting of the queer-inspired dance album Renaissance (2022) and Americana epic Cowboy Carter (2024) – has highlighted the contributions of Black pioneers to American musical and cultural history, spawning the U.S. Billboard Hot 100 number-one singles \"Break My Soul\" and \"Texas Hold 'Em\".\r\n\r\nBeyoncé is one of the best-selling music artists of all time, with estimated sales of over 200 million records. She is the only female artist to debut all of their eight studio albums at number one on the U.S. Billboard 200. She is the most awarded and nominated artist of all time in the history of the Grammy Awards, as well as the most awarded artist at the BET, NAACP Image, and Soul Train Music Awards. Her inductions include the Guinness World Records Hall of Fame and the Black Music & Entertainment Walk of Fame. The first woman to headline an all-stadium tour, Beyoncé is one of the highest-grossing live acts in history. Billboard named her the Top Female Artist of the 2000s and the Greatest Pop Star of the 21st Century. Rolling Stone listed her as one of the greatest singers ever and included several of her albums, singles, and music videos among the greatest of all time.",
+    "time_created": "2025-04-04T14:55:57.818Z",
+    "time_updated": "2025-04-04T14:55:57.818Z",
+    "is_published": true,
+    "cat": 2,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      2,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 10,
+  "fields": {
+    "title": "Katy Perry",
+    "slug": "katy-perry",
+    "photo": "photos/2025/04/04/katy_perry.jpg",
+    "content": "Katheryn Elizabeth Hudson (born October 25, 1984), known professionally as Katy Perry, is an American singer, songwriter, and television personality. Perry is one of the best-selling music artists in history, having sold over 143 million units worldwide. She is known for her influence on pop music and her camp style, being dubbed the \"Queen of Camp\" by Vogue and Rolling Stone.\r\n\r\nAt 16, Perry released a gospel record titled Katy Hudson (2001) under Red Hill Records, which was commercially unsuccessful. She moved to Los Angeles at 17 to venture into secular music, and later adopted the stage name \"Katy Perry\" from her mother's maiden name. She recorded an album while signed to Columbia Records, but was dropped before signing to Capitol Records. Perry rose to fame with One of the Boys (2008), a pop rock record containing her debut single \"I Kissed a Girl\" and follow-up single \"Hot n Cold\", which reached number one and three on the U.S. Billboard Hot 100 respectively.\r\n\r\nThe disco-influenced pop album Teenage Dream (2010) spawned five U.S. number one singles—\"California Gurls\", \"Teenage Dream\", \"Firework\", \"E.T.\", and \"Last Friday Night (T.G.I.F.)\"— the only album by a female singer to do so. The album's reissue titled Teenage Dream: The Complete Confection (2012) produced the U.S. number one single \"Part of Me\". Her empowerment-themed album Prism (2013) had two U.S. number one singles, \"Roar\" and \"Dark Horse\". Both their respective music videos made her the first artist to have multiple videos reach one billion views on Vevo and YouTube. Afterwards, Perry released the albums Witness (2017), Smile (2020) and 143 (2024) to varying critical and commercial success.\r\n\r\nPerry has the second-most U.S. Diamond-certified singles for any female artist (six). She has received various accolades, including a Billboard Spotlight Award, four Guinness World Records, five Billboard Music Awards, five American Music Awards, a Brit Award, a Juno Award, and the Michael Jackson Video Vanguard Award. Outside of music, she released an autobiographical documentary titled Katy Perry: Part of Me in 2012, voiced Smurfette in The Smurfs film series (2011–2013), and launched her own shoe line Katy Perry Collections in 2017.\r\n\r\nPerry served as a judge on American Idol from the sixteenth season in 2018 to the twenty-second season in 2024. Forbes ranked her as the world's highest-paid female musician in 2015 and 2018. With an estimated net worth of $350 million, she is one of the world's wealthiest musicians. Billboard ranked her fourth on its \"Greatest of All Time Pop Songs Artists\" list and twenty-fifth on their \"Greatest Pop Stars of the 21st Century\" list.",
+    "time_created": "2025-04-04T14:58:07.158Z",
+    "time_updated": "2025-04-04T14:58:07.158Z",
+    "is_published": true,
+    "cat": 2,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      2,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 11,
+  "fields": {
+    "title": "Shakira",
+    "slug": "shakira",
+    "photo": "photos/2025/04/04/shakira.jpg",
+    "content": "Shakira Isabel Mebarak Ripoll[a] (/ʃəˈkɪərə/ shə-KEER-ə, Spanish: [ʃaˈkiɾa isaˈβel meβaˈɾak riˈpol]; born 2 February 1977)[1] is a Colombian singer-songwriter. She has had a significant impact on the musical landscape of Latin America and has been credited with popularizing Hispanophone music on a global level.[2] The recipient of various accolades, she has won four Grammy Awards and fifteen Latin Grammy Awards, including three Song of the Year wins.\r\n\r\nShakira made her recording debut with Sony Music Colombia at the age of 14. Following the commercial failure of her first two albums, Magia (1991) and Peligro (1993), she rose to prominence with the next two, Pies Descalzos (1995) and Dónde Están los Ladrones? (1998). Shakira entered the English-language market with her fifth album, Laundry Service (2001), which sold over 15 million copies worldwide,[3] becoming the best-selling album of all time by a female Latin artist. Her success was further solidified with the Spanish-language albums Fijación Oral, Vol. 1 (2005), Sale el Sol (2010), El Dorado (2017), and Las Mujeres Ya No Lloran (2024), all of which topped the Billboard Top Latin Albums chart, making her the first woman with number-one albums across four different decades. Her English-language albums Oral Fixation, Vol. 2 (2005), She Wolf (2009), and Shakira (2014) received platinum certifications in various countries worldwide.\r\n\r\nShakira scored numerous number-one singles and other top songs worldwide, including \"Estoy Aquí\", \"Ciega, Sordomuda\", \"Ojos Así\", \"Whenever, Wherever\", \"Underneath Your Clothes\", \"Objection (Tango)\", \"La Tortura\", \"Hips Don't Lie\", \"Beautiful Liar\", \"She Wolf\", \"Waka Waka (This Time for Africa)\", \"Loca\", \"Rabiosa\", \"Can't Remember to Forget You\", \"Dare (La La La)\", \"La Bicicleta\", \"Chantaje\", \"Te Felicito\", \"Bzrp Music Sessions, Vol. 53\", and \"TQG\". Shakira served as a coach on two seasons of the American singing competition television series The Voice (2013–2014), had a voice role in the animated film Zootopia (2016), and executive produced and judged the dance competition series Dancing with Myself (2022).\r\n\r\nWith over 125 million records sold worldwide, Shakira is one of the world's best-selling musicians.[4] Noted to be a \"global phenom\" whose impact has \"reached every corner of the world\", Shakira has been described as an \"artistic link between the west and the east\" for popularizing Middle Eastern sounds in the West, and western sounds in the East (mainly the Middle East).[5] She is credited with opening the doors of the international market for other Latin artists.[6][7] Billboard named her the Top Female Latin Artist of the Decade twice (2000s and 2010s).[8][9] For her philanthropic work with her Barefoot Foundation and her contributions to music, she received the Latin Recording Academy Person of the Year and Harvard Foundation Artist of the Year awards in 2011. Shakira was appointed to the President's Advisory Commission on Educational Excellence for Hispanics in the United States in 2011, and Chevalier of the Order of Arts and Letters by the French government in 2012.",
+    "time_created": "2025-04-04T14:59:09.512Z",
+    "time_updated": "2025-04-04T14:59:09.512Z",
+    "is_published": true,
+    "cat": 2,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      7
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 12,
+  "fields": {
+    "title": "Anastasia Ashley",
+    "slug": "anastasia-ashley",
+    "photo": "photos/2025/04/04/anastasia-ashley-04.jpg",
+    "content": "Anastasia Electra Ashley (born February 10, 1987) is an American professional surfer and model.[1][2][3][4][5]\r\n\r\nEarly life\r\nAshley was born in San Clemente, California on February 10, 1987.[6][7][8] She began surfing at the age of 5 right before moving to Hawaii.[9] At the age of 6, she won a surf contest using a run-down board that she found in a trash can outside of her house.[10] By the age of 7, she picked up a sponsor to replace her run-down board with new ones.[10]\r\n\r\nCareer\r\n\r\nAshley at Surf Summit, prior to Web Summit 2017, in Ericeira, Portugal\r\nIn 2003, she received the Triple Crown Rookie of the Year award.[10] At the age of 16, Ashley won her first major national title.[11] Later, she also won titles including two National Scholastic Surfing Association championships and the Professional Surfing Tour of America championship.[10] Ashley won the 2010 Pipeline Women's Pro in Hawaii.[1] She appeared in the Sports Illustrated Swimsuit Edition in 2014.[12] As of September 8, 2014, Ashley is ranked 59th in the 2014 Women's Qualification Series.[13]\r\n\r\nIn September 2014, she started her own Gypsy Jet Set jewelry line in collaboration with OK1984, a jewelry company.[1][14][15] She was featured in the October 2014 issue of Maxim magazine.[16] In November 2014, she went to Ireland for a Web Summit on how to maintain a competitive edge in surfing with a focus on social media tools. Ashley was interested in convincing Taoiseach Enda Kenny to surf.[11]\r\n\r\nAshley appeared on Hell's Kitchen in the third episode of Season 14 where she taught the team challenge winners how to surf. She also attended as a dining room guest in that episode's dinner service.[17][18]\r\n\r\nPersonal life\r\nAshley is reported to have been a vegetarian in the past.[19] However, in 2017, she was a survivalist in the TV show Naked and Afraid, where she was seen eating fish.",
+    "time_created": "2025-04-04T15:00:39.978Z",
+    "time_updated": "2025-04-04T15:00:39.978Z",
+    "is_published": true,
+    "cat": 3,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 13,
+  "fields": {
+    "title": "Madonna",
+    "slug": "madonna",
+    "photo": "photos/2025/04/04/madonna.jpg",
+    "content": "Madonna Louise Ciccone[a] (/tʃɪˈkoʊni/ chih-KOH-nee; born August 16, 1958) is an American singer, songwriter, record producer, and actress. Commonly known as the \"Queen of Pop\", she has been recognized for her continual reinvention and versatility in music production, songwriting and visual presentation. Madonna's works, which incorporate social, political, sexual, and religious themes, have generated both controversy and critical acclaim. A cultural icon spanning both the 20th and 21st centuries, Madonna has become the subject of various scholarly, literary and artistic works, as well as a mini academic sub-discipline called Madonna studies.\r\n\r\nMadonna moved to New York City in 1978 to pursue a career in dance. After performing as a drummer, guitarist, and vocalist in the rock bands Breakfast Club and Emmy & the Emmys, she rose to solo stardom with her 1983 eponymous debut album. Madonna has obtained a total of 18 multi-platinum albums, including Like a Virgin (1984), True Blue (1986), and The Immaculate Collection (1990)—which became some of the best-selling albums in history—as well as Confessions on a Dance Floor (2005), her 21st-century bestseller. Her albums Like a Prayer (1989), Ray of Light (1998), and Music (2000) were ranked among Rolling Stone's greatest albums of all time. Madonna's catalog of top-charting songs includes \"Like a Virgin\", \"Material Girl\", \"La Isla Bonita\", \"Like a Prayer\", \"Vogue\", \"Take a Bow\", \"Frozen\", \"Music\", \"Hung Up\" and \"4 Minutes\".\r\n\r\nHer popularity was enhanced by roles in films such as Desperately Seeking Susan (1985), Dick Tracy (1990), A League of Their Own (1992) and Evita (1996). While she won a Golden Globe Award for Best Actress for the lattermost, many of her other films were not well received. As a businesswoman, Madonna founded the company Maverick in 1992, which included Maverick Records, one of the most successful artist-run labels in history. Her other ventures include fashion brands, written works, health clubs and filmmaking. She contributes to various charities, having founded the Ray of Light Foundation in 1998 and Raising Malawi in 2006, and advocates for gender equality and LGBT rights.\r\n\r\nMadonna is the world's best-selling female recording artist of all time and the first female performer to accumulate US$1 billion from her concerts. She is the most successful solo artist in the history of the US Billboard Hot 100 chart and has achieved 44 number-one singles in between major global music markets. Her accolades include seven Grammy Awards, two Golden Globe Awards, 20 MTV Video Music Awards, 17 Japan Gold Disc Awards, and an induction into the Rock and Roll Hall of Fame in her first year of eligibility. On Forbes annual rankings, Madonna became the world's highest-paid female musician a record 11 times across four decades (1980s–2010s). Billboard named her the Artist of the Decade (1980s), the Greatest Dance Artist of All Time, and the Greatest Music Video Artist of All Time. She was also listed among Rolling Stone's greatest artists and greatest songwriters ever.",
+    "time_created": "2025-04-04T15:02:51.467Z",
+    "time_updated": "2025-04-04T15:02:51.467Z",
+    "is_published": true,
+    "cat": 2,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      6
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 14,
+  "fields": {
+    "title": "Maria Sharapova",
+    "slug": "maria-sharapova",
+    "photo": "photos/2025/04/04/maria_sharapova.jpg",
+    "content": "Maria Yuryevna Sharapova (Russian: Мария Юрьевна Шарапова, romanized: Mariya Yuryevna Sharapova, pronounced [mɐˈrʲijə ʂɐˈrapəvə] ⓘ; born 19 April 1987) is a Russian former professional tennis player. She was ranked as the world No. 1 in women's singles by the Women's Tennis Association (WTA) for 21 weeks. Sharapova won 36 WTA Tour-level singles titles, including five major titles, as well as the 2004 WTA Tour Championships. She is one of ten women to achieve the Career Grand Slam in singles.\r\n\r\nA teen sensation, Sharapova broke through to the top of the sport by winning the 2004 Wimbledon Championships as a 17-year-old, upsetting two-time defending champion Serena Williams. She then won the 2004 Tour Finals, and became the world No. 1 for the first time in August 2005 at the age of 18, the first Russian woman to top the singles rankings.[4][5] Continued success over the following years, including titles at the 2006 US Open and 2008 Australian Open, was accompanied by recurring injuries, and Sharapova dipped in and out of the top 10 around the turn of the decade. After a career-long struggle with success on clay courts, Sharapova claimed the 2012 French Open to complete the career Grand Slam, briefly returning to the No. 1 position, and shortly after won an Olympic silver medal in women's singles at the 2012 London Olympics. She won a second French Open title in 2014 for her fifth major championship.\r\n\r\nSharapova failed a drug test at the 2016 Australian Open, testing positive for meldonium, a substance that had been banned (effective 1 January 2016) by the World Anti-Doping Agency (WADA). On 8 June 2016, she was suspended from playing tennis for two years by the International Tennis Federation (ITF).[6][7][8] On 4 October 2016, the suspension was reduced to 15 months, starting from the date of the failed test, as the Court of Arbitration for Sport found that she had committed \"no significant fault\" and that she had taken the substance \"based on a doctor's recommendation... with good faith belief that it was appropriate and compliant with the relevant rules\".[9][10][11] She returned to the WTA Tour in April 2017 at the Stuttgart Open. Sharapova retired from the sport in 2020.\r\n\r\nSharapova has been featured in a number of modeling assignments, including a feature in the Sports Illustrated Swimsuit Issue. She has appeared in many advertisements, including those for Nike, Prince, and Canon, and has been the face of several fashion houses, most notably Cole Haan. Since February 2007, she has been a United Nations Development Programme Goodwill Ambassador, concerned specifically with the Chernobyl Recovery and Development Programme. In June 2011, she was named one of the \"30 Legends of Women's Tennis: Past, Present and Future\" by Time[12] and in March 2012 was named one of the \"100 Greatest of All Time\" by Tennis Channel. According to Forbes, she was the highest-paid female athlete in the world for 11 consecutive years and earned US$285 million (including prize money) since she turned professional in 2001.[13][14] In 2018, she launched a new program to mentor women entrepreneurs.[15]",
+    "time_created": "2025-04-04T15:04:28.642Z",
+    "time_updated": "2025-04-04T15:04:28.642Z",
+    "is_published": true,
+    "cat": 3,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "women.woman",
+  "pk": 15,
+  "fields": {
+    "title": "Ellen Hoog",
+    "slug": "ellen-hoog",
+    "photo": "photos/2025/04/04/ellenhoogb.jpg",
+    "content": "Ellen Marijn Hoog (Dutch pronunciation: [ˈɛlə(n) ˈɦoːx]; born 26 March 1986)[3] is a former Dutch field hockey player, who is regarded as one of the best Dutch hockey players of her generation.\r\n\r\nField hockey career\r\nEllen began playing field hockey at the age of seven and in 2002, aged 16 she was selected to play her first senior game for Stichtse Cricket en Hockey Club in Bilthoven and made her debut for the Netherlands women's national field hockey team at age 17 in 2004[4] and has played in 232 matches, scoring 60 goals. She won Olympic gold medals in 2008 and 2012 and a silver medal in 2016.[1]\r\n\r\nIn August 2005, she became the European champion in Dublin. In December of the same year she won the Champions Trophy in Canberra with the Dutch national women's team. She was a part of the Dutch squads which won the 2006 Women's Hockey World Cup and the 2014 Women's Hockey World Cup. She was also named as the best player of the 2014 Women's Hockey World Cup.\r\n\r\nIn 2012, Hoog became the first player to decide a major championship match with a penalty shootout, taking the winning shot in the 2012 Summer Olympics semi-final against New Zealand. She repeated this feat in 2016 when she took the winning shot in the 2016 Summer Olympics semi against Germany.\r\n\r\nShe retired from international duty in 2016. She then later retired from hockey at her club Amsterdamsche Hockey & Bandy Club in May 2017.[citation needed",
+    "time_created": "2025-04-04T15:06:25.053Z",
+    "time_updated": "2025-04-04T15:06:25.053Z",
+    "is_published": true,
+    "cat": 3,
+    "husband": null,
+    "author": 1,
+    "tags": [
+      1,
+      4,
+      6
+    ]
+  }
+}
+]
