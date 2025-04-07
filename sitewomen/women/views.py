@@ -1,13 +1,13 @@
-from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.urls.exceptions import Resolver404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, FormView
 
-from .forms import AddPostForm
+from .forms import AddPostForm, ContactForm
 from .models import Woman, TagPost
 from .utils import DataMixin, MENU
 
@@ -99,9 +99,15 @@ class DeletePage(DataMixin, DeleteView):
     title_page = 'Deleting a Post'
 
 
-@permission_required(perm='women.view_woman', raise_exception=True)
-def contact(request: HttpRequest) -> HttpResponse:
-    return HttpResponse('Contact us')
+class ContactFormView(LoginRequiredMixin, DataMixin, FormView):
+    form_class = ContactForm
+    template_name = 'women/contact.html'
+    success_url = reverse_lazy('home')
+    title_page = 'Feedback'
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
 
 
 def login(request: HttpRequest) -> HttpResponse:
